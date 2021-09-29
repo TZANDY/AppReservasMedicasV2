@@ -7,6 +7,8 @@ import { ServicesComponent } from './pages/services/services.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { DoctorsComponent } from './pages/doctors/doctors.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
+import { CitamedicaComponent } from './pages/citamedica/citamedica.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 //Crear una constante
 const routes: Routes = [
@@ -18,7 +20,9 @@ const routes: Routes = [
     {path:'departments',component:DepartmentsComponent},
     {path:'doctors',component:DoctorsComponent},
     {path:'contactus',component:ContactusComponent},
-    {path:'',redirectTo:'home',pathMatch:'full'}
+    {path:'',redirectTo:'home',pathMatch:'full'},
+    {path:'citamedica',component:CitamedicaComponent},
+    {path:'auth/login',component:LoginComponent}
     
 
 ];

@@ -9,6 +9,8 @@ import { ServicesComponent } from './pages/services/services.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { DoctorsComponent } from './pages/doctors/doctors.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
+import { CitamedicaComponent } from './pages/citamedica/citamedica.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
     ServicesComponent,
     DepartmentsComponent,
     DoctorsComponent,
-    ContactusComponent
+    ContactusComponent,
+    CitamedicaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
