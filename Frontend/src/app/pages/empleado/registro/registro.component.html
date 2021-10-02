@@ -1,0 +1,98 @@
+<div class="login-dark">
+    <form method="post" style="background-color: lightskyblue; max-width: 800px;">
+        <h2 class="text-center" style="color: rgb(0,0,0); font-size: 26px; margin-bottom:20px;">Registrar Empleado</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-6">
+                    <select formControlName="tipo_doc" class="form-control" style="color: rgb(0,0,0);">
+                        <option value="" selected=""></option>
+                        <option value="1">DNI</option>
+                        <option value="2">Carnet Extrangería</option>
+                        <option value="3">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="form-group col-6">
+                    <input class="form-control" type="number" placeholder="Nro. de documento" formControlName="nro_doc"
+                        style="color: rgb(0,0,0);">
+                    <small class="form-text text-danger d-none">Ingrese número de documento</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-4">
+                    <input class="form-control" type="text" name="nombre" placeholder="Nombre" formControlName="nombre"
+                        autocomplete="off" style="color: rgb(0,0,0);">
+                    <small class="form-text text-danger d-none">Ingrese un nombre correcto</small>
+                </div>
+                <div class="form-group col-4">
+                    <input class="form-control" type="text" name="apePaterno" placeholder="Apellido Paterno"
+                        formControlName="apePaterno" autocomplete="off" style="color: rgb(0,0,0);">
+                    <small class="form-text text-danger d-none">Ingrese un apellido correcto</small>
+                </div>
+                <div class="form-group col-4">
+                    <input class="form-control" type="text" name="apeMaterno" placeholder="Apellido Materno"
+                        formControlName="apeMaterno" autocomplete="off" style="color: rgb(0,0,0);">
+                    <small class="form-text text-danger d-none">Ingrese un apellido correcto</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-4">
+                    <select formControlName="sexo" class="form-control form-control-sm" style="color: rgb(0,0,0);">
+                        <option value="" selected=""></option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group col-4">
+                    
+                </div>
+                <div class="form-group col-4">
+                    <input class="form-control" type="number" placeholder="Teléfono" formControlName="telefono" style="color: rgb(0,0,0);">
+                    <small class="form-text text-danger d-none">Ingrese número de teléfono</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <select class="form-control" style="color: rgb(0,0,0);" formControlName="cargo" placeholder="Cargo">
+                        <option value="1">Gerente</option>
+                        <option value="2">Doctor</option>
+                        <option value="3">Enfermero</option>
+                        <option value="4">Cirujano</option>
+                    </select>
+                    <small class="form-text text-danger d-none">Ingrese un cargo</small>
+                </div>
+                <div class="form-group col-6">
+                    <select class="form-control" style="color: rgb(0,0,0);" formControlName="especialidad" placeholder="Especialidad">
+                        <option value="1">Pediatría</option>
+                        <option value="2">Cardiología</option>
+                        <option value="3">Oftalmología</option>
+                        <option value="4">Emergencias</option>
+                    </select>
+                    <small class="form-text text-danger d-none">Ingrese una especialidad</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <input class="form-control" type="email" placeholder="E-Mail" formControlName="email">
+                    <small class="form-text text-danger d-none">Ingrese un e-mail</small>
+                </div>
+                <div class="form-group col-6">
+                    <input class="form-control" type="text" placeholder="Usuario" formControlName="usuario">
+                    <small class="form-text text-danger d-none">Ingrese nombre de usuario</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <input class="form-control" type="password" placeholder="Ingrese contraseña" formControlName="password_1" style="text-emphasis-color: rgb(0,0,0);">
+                </div>
+                <div class="form-group col-6">
+                    <input class="form-control" type="password" placeholder="Ingrese contraseña de nuevo" formControlName="password_2" style="text-decoration-color: rgb(0,0,0);">
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-dark" type="submit" (click)="_onSubmit()"
+                style="font-weight: normal;">Registrar</button>
+        </div>
+    </form>
+</div>

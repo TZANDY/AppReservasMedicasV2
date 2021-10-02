@@ -9,6 +9,8 @@ import { DoctorsComponent } from './pages/doctors/doctors.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { CitamedicaComponent } from './pages/citamedica/citamedica.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { RegistroComponent } from "./pages/empleado/registro/registro.component";
+import { ListaComponent } from "./pages/empleado/lista/lista.component";
 
 //Crear una constante
 const routes: Routes = [
@@ -22,8 +24,9 @@ const routes: Routes = [
     {path:'contactus',component:ContactusComponent},
     {path:'',redirectTo:'home',pathMatch:'full'},
     {path:'citamedica',component:CitamedicaComponent},
-    {path:'auth/login',component:LoginComponent}
-    
+    {path:'auth/login',component:LoginComponent},
+    {path:'empleado/lista', component:ListaComponent},
+    {path:'empleado/registro', component:RegistroComponent}
 
 ];
 

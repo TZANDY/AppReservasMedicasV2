@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 90px;">
+    <div class="row justify-content-center" style="margin-bottom: -15px;">
+        <div class="login-dark" style="background-image: none;width: 95%;background-color: lightsteelblue;padding: 40px;border-radius: 4px;box-shadow: 3px 3px 4px rgba(0,0,0,0.2);height: auto;">
+            <h2 style="text-align: center; color: rgb(255,255,255);font-size: 26px; margin-bottom:20px;">Listado de Empleados</h2>
+            <a routerLink="/empleado/registro" class="btn btn-dark" style="margin: 15px;margin-right: 0;margin-left: 0">Registrar Empleado</a>
+            <div class="table-responsive table-striped" style="border-radius: 10px;">
+                <table class="table" style="margin:0px;">
+                    <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
+                        <tr>
+                            <th *ngFor="let col of headers" style="vertical-align: middle; text-align: center;">
+                                {{col}}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: rgba(198, 200, 202, 0.75);">
+                        <tr *ngFor="let emp of empleados">
+                            <!--<td *ngFor="let col of headers">{{emp[col]}}</td> -->
+                            <td style="vertical-align: middle; text-align: center;">{{emp.numeroDocumento}}</td>
+                            <td style="vertical-align: middle; text-align: center;">{{emp.nombres}} {{emp.apellidoPaterno}} {{emp.apellidoMaterno}}</td>
+                            <td style="vertical-align: middle; text-align: center;">{{emp.cargo}}<br></td>
+                            <td class="text-center"><a href="/empleado/{{emp.idEmpleado}}" class="btn btn-outline-dark"><i class="fa fa-pencil"></i></a></td>
+                            <td class="text-center"><a href="#" class="btn btn-outline-danger"><i class="fa fa-remove"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
